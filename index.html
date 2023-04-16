@@ -6,29 +6,29 @@
     <title>Type</title>
 </head>
 
-<body v-scope="{ text: '' }">
-    <div class="editor" contenteditable="true" v-model="text" @vue:mounted="$el.focus()"></div>
-    <script src="https://unpkg.com/petite-vue" defer init></script>
+<body>
+    <div class="editor" contenteditable="true"></div>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .editor {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding-top: 10rem;
+            font-family: system-ui, sans-serif;
+            font-size: 4rem;
+            text-align: center;
+        }
+    </style>
+    <script>document.querySelector("editor").focus()</script>
 </body>
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .editor {
-        box-sizing: border-box;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding-top: 10rem;
-        font-family: system-ui, sans-serif;
-        font-size: 4rem;
-        text-align: center;
-    }
-</style>
 
 </html>
